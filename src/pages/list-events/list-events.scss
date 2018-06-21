@@ -1,0 +1,24 @@
+page-list-events {
+.listClass{
+    text-align: center;
+    }
+    #bandeButom{
+        padding: 0px;
+        margin: 0px;
+        border: none;
+        width: 100%;
+        height: 50px;
+        background-color:#E53C3C; 
+        bottom: 0px;
+        position: absolute;
+    }
+    #choiceButton {
+        display: block;
+        margin:20px auto;
+        padding: 10px;
+       
+    }
+    h1 {
+        font-size: 20px;
+    }
+}

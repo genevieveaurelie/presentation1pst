@@ -1,0 +1,34 @@
+page-home {
+    #warningButton {
+        display: block;
+        margin:100px auto;
+        
+       
+    }
+    #bandeButom{
+        padding: 0px;
+        margin: 0px;
+        border: none;
+        width: 100%;
+        height: 50px;
+        background-color:#E53C3C; 
+        bottom: 0px;
+        position: absolute;
+    }
+    .homeTitleClass{
+        text-align: center;
+    }
+    #button{
+        text-align: center;
+        position: absolute;
+        left:0;
+        right: 0;
+        margin: 0 auto;
+        top:50%;
+        vertical-align: middle;
+        transform:translateY(-50%);
+    
+        }
+}
+
+
