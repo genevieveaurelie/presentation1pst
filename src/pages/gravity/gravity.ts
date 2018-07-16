@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import {AngularFireDatabase} from 'angularfire2/database';
-import {HomePage} from '../home/home';
+
+import { MapPage } from '../map/map';
 
 /**
  * Generated class for the GravityPage page.
@@ -26,18 +27,20 @@ export class GravityPage {
 
   addData(){
     this.afd.list('Incident rencontré/').push(this.gravity)
+  
 
-    //Envoie de la notification
-    let toast=this.toastCtrl.create({
-      message:'Votre incident a bien été signalé',
-      duration: 3000,
-      position: 'middle'
-    });
-    toast.onDidDismiss(() =>{
-      console.log('Dismissed toast');
-    });
-    toast.present();
-    this.navCtrl.push(HomePage);
+      //Envoie de la notification
+      let toast=this.toastCtrl.create({
+        message:'Votre incident a bien été signalé',
+        duration: 3000,
+        position: 'middle'
+      });
+      toast.onDidDismiss(() =>{
+        console.log('Dismissed toast');
+      });
+      toast.present();
+      this.navCtrl.push(MapPage);
+  
   }
 
  

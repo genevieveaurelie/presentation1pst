@@ -22,30 +22,30 @@ import { GravityPage } from '../gravity/gravity';
 })
 export class ListEventsPage {
 
-  incendie;
+  incident;
   constructor(public navCtrl: NavController, public navParams: NavParams,
   public afd : AngularFireDatabase, private toastCtrl: ToastController) {
 
   }
 
  incendieDetails(){
-  this.afd.list('Incident rencontré/').push(this.incendie);
+  this.afd.list('Incident rencontré/').push(this.incident);
    this.navCtrl.push(DetailsIncendiePage);
  }
  inondationDetails(){
-  this.afd.list('Incident rencontré/').push(this.incendie);
+  this.afd.list('Incident rencontré/').push(this.incident);
   this.navCtrl.push(DetailsInondationPage);
 }
 volDetails(){
-  this.afd.list('Incident rencontré/').push(this.incendie);
+  this.afd.list('Incident rencontré/').push(this.incident);
   this.navCtrl.push(DetailsVolPage);
 }
 accidentDetails(){
-  this.afd.list('Incident rencontré/').push(this.incendie);
+  this.afd.list('Incident rencontré/').push(this.incident);
   this.navCtrl.push(DetailsAccidentPage);
 }
 gravityChoice(){
-  this.afd.list('Incident rencontré/').push(this.incendie);
+  this.afd.list('Incident rencontré/').push(this.incident);
   this.navCtrl.push(GravityPage);
 }
 

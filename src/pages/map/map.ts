@@ -6,10 +6,10 @@ import {AngularFireDatabase} from 'angularfire2/database';
 declare var google;
  
 @Component({
-  selector: 'home-page',
-  templateUrl: 'home.html'
+  selector: 'page-map',
+  templateUrl: 'map.html'
 })
-export class HomePage {
+export class MapPage {
  
   @ViewChild('map') mapElement: ElementRef;
   map: any;

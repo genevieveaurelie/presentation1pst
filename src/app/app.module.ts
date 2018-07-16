@@ -15,7 +15,9 @@ import { DetailsInondationPage} from '../pages/details-inondation/details-inonda
 import { DetailsVolPage} from '../pages/details-vol/details-vol';
 import { DetailsAccidentPage} from '../pages/details-accident/details-accident';
 import { GravityPage} from '../pages/gravity/gravity';
-import {MapPage} from '../pages/map/map';
+import { MapPage} from '../pages/map/map';
+
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -47,6 +49,7 @@ var config = {
     DetailsAccidentPage,
     GravityPage,
     MapPage
+  
   ],
   imports: [
     BrowserModule,
@@ -70,6 +73,7 @@ var config = {
     DetailsAccidentPage,
     GravityPage,
     MapPage
+   
   ],
   providers: [
     StatusBar,
