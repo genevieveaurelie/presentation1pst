@@ -1,0 +1,39 @@
+<!--
+  Generated template for the GravityPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="tahiry">
+    <ion-title class="listClass">Gravité de l'incident</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <h1 ion-text align="center">Comment jugez-vous la gravité de l'incident?</h1>
+  <br><br>
+    <ion-list radio-group [(ngModel)]="gravity" >
+        <ion-item >
+          <ion-label>Faible</ion-label>
+          <ion-radio value="Gravité:Faible"></ion-radio>
+        </ion-item>
+        <ion-item >
+          <ion-label>Élevée</ion-label>
+          <ion-radio value="Gravité:Élevée"></ion-radio>
+        </ion-item>
+        <ion-item >
+          <ion-label>Très élevée</ion-label>
+          <ion-radio value= "Gravité: Très elevée"></ion-radio>
+        </ion-item>
+          <button id="choiceButton" ion-button color="tahiry" round (click)='addData()'>Valider</button>
+      </ion-list>
+      
+</ion-content>
+
+<ion-footer id="bandeButom">
+  
+</ion-footer>

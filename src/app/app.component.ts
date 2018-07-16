@@ -9,6 +9,7 @@ import { GesteSecoursPage } from '../pages/geste-secours/geste-secours';
 import { PresentationPage } from '../pages/presentation/presentation';
 import { ContactPage } from '../pages/contact/contact';
 
+
 @Component({
   templateUrl: 'app.html'
 })

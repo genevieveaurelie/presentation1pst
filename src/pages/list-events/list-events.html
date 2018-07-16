@@ -16,28 +16,28 @@
 <ion-content>
   <h1 ion-text align="center">Quel incident souhaitez-vous signaler?</h1>
   <br><br>
-    <ion-list radio-group [(ngModel)]="incident">
+    <ion-list radio-group [(ngModel)]="incident" >
         <ion-item >
           <ion-label>Incendie</ion-label>
-          <ion-radio value="incendie"></ion-radio>
+          <ion-radio value="incendie" (ionSelect)="incendieDetails()"></ion-radio>
         </ion-item>
         <ion-item >
           <ion-label>Inondation</ion-label>
-          <ion-radio value="inondation"></ion-radio>
+          <ion-radio value="inondation" (ionSelect)="inondationDetails()"></ion-radio>
         </ion-item>
         <ion-item >
           <ion-label>Attaque terroriste</ion-label>
-          <ion-radio value="attaque terroriste" [disabled]="isDisabled"></ion-radio>
+          <ion-radio value="attaque terroriste" (ionSelect)="gravityChoice()"></ion-radio>
         </ion-item>
         <ion-item >
             <ion-label>Vol</ion-label>
-            <ion-radio value="vol" [disabled]="isDisabled"></ion-radio>
+            <ion-radio value="vol" (ionSelect)="volDetails()"></ion-radio>
           </ion-item>
           <ion-item >
             <ion-label>Accident routier</ion-label>
-            <ion-radio value="accident routier" [disabled]="isDisabled"></ion-radio>
+            <ion-radio value="accident routier" (ionSelect)="accidentDetails()" ></ion-radio>
           </ion-item>
-          <button id="choiceButton" ion-button color="tahiry" round (click)='addData()'>Valider</button>
+         
       </ion-list>
       
 </ion-content>

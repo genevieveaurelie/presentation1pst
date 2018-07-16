@@ -2,6 +2,11 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import {AngularFireDatabase} from 'angularfire2/database';
 import { HomePage } from '../home/home';
+import { DetailsIncendiePage} from '../details-incendie/details-incendie';
+import { DetailsInondationPage} from '../details-inondation/details-inondation';
+import {DetailsVolPage} from '../details-vol/details-vol';
+import { DetailsAccidentPage} from '../details-accident/details-accident';
+import { GravityPage } from '../gravity/gravity';
 
 /**
  * Generated class for the ListEventsPage page.
@@ -17,29 +22,32 @@ import { HomePage } from '../home/home';
 })
 export class ListEventsPage {
 
-  
-  incident;
+  incendie;
   constructor(public navCtrl: NavController, public navParams: NavParams,
   public afd : AngularFireDatabase, private toastCtrl: ToastController) {
 
   }
 
- 
-  addData(){
-    this.afd.list('Incident rencontré/').push(this.incident)
-
-    //Envoie de la notification
-    let toast=this.toastCtrl.create({
-      message:'Votre incident a bien été signalé',
-      duration: 3000,
-      position: 'middle'
-    });
-    toast.onDidDismiss(() =>{
-      console.log('Dismissed toast');
-    });
-    toast.present();
-    this.navCtrl.push(HomePage);
-  }
+ incendieDetails(){
+  this.afd.list('Incident rencontré/').push(this.incendie);
+   this.navCtrl.push(DetailsIncendiePage);
+ }
+ inondationDetails(){
+  this.afd.list('Incident rencontré/').push(this.incendie);
+  this.navCtrl.push(DetailsInondationPage);
+}
+volDetails(){
+  this.afd.list('Incident rencontré/').push(this.incendie);
+  this.navCtrl.push(DetailsVolPage);
+}
+accidentDetails(){
+  this.afd.list('Incident rencontré/').push(this.incendie);
+  this.navCtrl.push(DetailsAccidentPage);
+}
+gravityChoice(){
+  this.afd.list('Incident rencontré/').push(this.incendie);
+  this.navCtrl.push(GravityPage);
+}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ListEventsPage');

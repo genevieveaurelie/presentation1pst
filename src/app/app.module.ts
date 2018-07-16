@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { Geolocation } from '@ionic-native/geolocation';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -9,6 +10,12 @@ import {ListEventsPage} from '../pages/list-events/list-events';
 import { GesteSecoursPage} from '../pages/geste-secours/geste-secours';
 import { PresentationPage} from '../pages/presentation/presentation';
 import {ContactPage} from '../pages/contact/contact';
+import { DetailsIncendiePage} from '../pages/details-incendie/details-incendie';
+import { DetailsInondationPage} from '../pages/details-inondation/details-inondation';
+import { DetailsVolPage} from '../pages/details-vol/details-vol';
+import { DetailsAccidentPage} from '../pages/details-accident/details-accident';
+import { GravityPage} from '../pages/gravity/gravity';
+import {MapPage} from '../pages/map/map';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -33,7 +40,13 @@ var config = {
     ListEventsPage,
     GesteSecoursPage,
     PresentationPage,
-    ContactPage
+    ContactPage,
+    DetailsIncendiePage,
+    DetailsInondationPage,
+    DetailsVolPage,
+    DetailsAccidentPage,
+    GravityPage,
+    MapPage
   ],
   imports: [
     BrowserModule,
@@ -50,11 +63,18 @@ var config = {
     ListEventsPage,
     GesteSecoursPage,
     PresentationPage,
-    ContactPage
+    ContactPage,
+    DetailsIncendiePage,
+    DetailsInondationPage,
+    DetailsVolPage,
+    DetailsAccidentPage,
+    GravityPage,
+    MapPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

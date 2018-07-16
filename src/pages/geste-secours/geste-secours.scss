@@ -5,8 +5,9 @@ page-geste-secours {
     }
 
 .flecheClass{
-    font-size: 17px;
+    font-size: 20px;
     color: #757979;
+    font-weight: bold;
 }
 #bandeButom{
     padding: 0px;
@@ -17,5 +18,10 @@ page-geste-secours {
     background-color:#E53C3C; 
     bottom: 0px;
     position: absolute;
+}
+.titreClass{
+    padding-left: 30px;
+    font-size: 17px;
+    color: #CA0014;
 }
 }
